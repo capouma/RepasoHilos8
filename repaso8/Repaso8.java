@@ -15,7 +15,14 @@ public class Repaso8 {
      */
     public static void main(String[] args)
     {
+        // Creamos una variable con un valor aleatorio.
+        int n = (int) (Math.random() * (20 - 1) + 1);
         
+        // Definimos e instanciamos el hilo y pasamos como parametro n.
+        Hilo hilo = new Hilo(n);
+        
+        // Lanzamos el hilo
+        hilo.start();
     }
     
 }
