@@ -17,8 +17,21 @@ public class Hilo extends Thread
         this.n = n;
     }
     
-    public void fibo()
+    @Override
+    public void run()
     {
+        // Instanciamos 3 variables de tipo int para realizar los calculos
+        int fibo1 = 0;
+        int fibo2 = 1;
+        int fibo3 = 0;
         
+        for(int i=0;i<n;i++)
+        {
+        fibo3 = fibo1 + fibo2;
+        fibo1 = fibo2;
+        fibo2 = fibo3;
+        
+        System.out.print(" "+ fibo1); 
+        }
     }
 }
